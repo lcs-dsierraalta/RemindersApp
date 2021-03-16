@@ -53,7 +53,8 @@
 			isa = PBXGroup;
 			children = (
 				397ADFAD26013A15001ADBB1 /* RemindersAppApp.swift */,
-				397ADFAF26013A15001ADBB1 /* ContentView.swift */,
+				397ADFBF26013ADC001ADBB1 /* Model */,
+				397ADFBD26013AC0001ADBB1 /* Views */,
 				397ADFB126013A1B001ADBB1 /* Assets.xcassets */,
 				397ADFB626013A1B001ADBB1 /* Info.plist */,
 				397ADFB326013A1B001ADBB1 /* Preview Content */,
@@ -67,6 +68,21 @@
 				397ADFB426013A1B001ADBB1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		397ADFBD26013AC0001ADBB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				397ADFAF26013A15001ADBB1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		397ADFBF26013ADC001ADBB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
