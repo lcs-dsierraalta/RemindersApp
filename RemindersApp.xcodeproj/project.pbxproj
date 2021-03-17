@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3931F3FC26026095002DB3B7 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3931F3FB26026094002DB3B7 /* TaskCell.swift */; };
 		397ADFAE26013A15001ADBB1 /* RemindersAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397ADFAD26013A15001ADBB1 /* RemindersAppApp.swift */; };
 		397ADFB026013A15001ADBB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397ADFAF26013A15001ADBB1 /* ContentView.swift */; };
 		397ADFB226013A1B001ADBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397ADFB126013A1B001ADBB1 /* Assets.xcassets */; };
 		397ADFB526013A1B001ADBB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397ADFB426013A1B001ADBB1 /* Preview Assets.xcassets */; };
+		397ADFC126013C09001ADBB1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397ADFC026013C09001ADBB1 /* Task.swift */; };
+		397ADFC526013C5D001ADBB1 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397ADFC426013C5D001ADBB1 /* TaskPriority.swift */; };
+		397ADFC826013CB9001ADBB1 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397ADFC726013CB9001ADBB1 /* TaskStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3931F3FB26026094002DB3B7 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		397ADFAA26013A15001ADBB1 /* RemindersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397ADFAD26013A15001ADBB1 /* RemindersAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersAppApp.swift; sourceTree = "<group>"; };
 		397ADFAF26013A15001ADBB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		397ADFB126013A1B001ADBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		397ADFB426013A1B001ADBB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		397ADFB626013A1B001ADBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		397ADFC026013C09001ADBB1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		397ADFC426013C5D001ADBB1 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
+		397ADFC726013CB9001ADBB1 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				397ADFAF26013A15001ADBB1 /* ContentView.swift */,
+				3931F3FB26026094002DB3B7 /* TaskCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -81,6 +90,9 @@
 		397ADFBF26013ADC001ADBB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				397ADFC026013C09001ADBB1 /* Task.swift */,
+				397ADFC426013C5D001ADBB1 /* TaskPriority.swift */,
+				397ADFC726013CB9001ADBB1 /* TaskStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,7 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				397ADFC826013CB9001ADBB1 /* TaskStore.swift in Sources */,
 				397ADFB026013A15001ADBB1 /* ContentView.swift in Sources */,
+				397ADFC126013C09001ADBB1 /* Task.swift in Sources */,
+				397ADFC526013C5D001ADBB1 /* TaskPriority.swift in Sources */,
+				3931F3FC26026095002DB3B7 /* TaskCell.swift in Sources */,
 				397ADFAE26013A15001ADBB1 /* RemindersAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
