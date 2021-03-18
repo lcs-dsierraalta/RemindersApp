@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3931F3FC26026095002DB3B7 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3931F3FB26026094002DB3B7 /* TaskCell.swift */; };
+		3931F3FF260264C5002DB3B7 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3931F3FE260264C5002DB3B7 /* AddTask.swift */; };
 		397ADFAE26013A15001ADBB1 /* RemindersAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397ADFAD26013A15001ADBB1 /* RemindersAppApp.swift */; };
 		397ADFB026013A15001ADBB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397ADFAF26013A15001ADBB1 /* ContentView.swift */; };
 		397ADFB226013A1B001ADBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397ADFB126013A1B001ADBB1 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		3931F3FB26026094002DB3B7 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		3931F3FE260264C5002DB3B7 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
 		397ADFAA26013A15001ADBB1 /* RemindersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397ADFAD26013A15001ADBB1 /* RemindersAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersAppApp.swift; sourceTree = "<group>"; };
 		397ADFAF26013A15001ADBB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				397ADFAF26013A15001ADBB1 /* ContentView.swift */,
 				3931F3FB26026094002DB3B7 /* TaskCell.swift */,
+				3931F3FE260264C5002DB3B7 /* AddTask.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				397ADFC126013C09001ADBB1 /* Task.swift in Sources */,
 				397ADFC526013C5D001ADBB1 /* TaskPriority.swift in Sources */,
 				3931F3FC26026095002DB3B7 /* TaskCell.swift in Sources */,
+				3931F3FF260264C5002DB3B7 /* AddTask.swift in Sources */,
 				397ADFAE26013A15001ADBB1 /* RemindersAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
