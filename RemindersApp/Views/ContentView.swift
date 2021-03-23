@@ -19,7 +19,7 @@ struct ContentView: View {
         List(store.tasks) { task in
             TaskCell(task: task)
         }
-        .navigationTitle("Reminders")
+        .navigationTitle("Assignments")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button("Add") {

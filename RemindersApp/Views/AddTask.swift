@@ -36,7 +36,7 @@ struct AddTask: View {
                     .pickerStyle(SegmentedPickerStyle())
                 }
             }
-            .navigationTitle("New Reminder")
+            .navigationTitle("New Assignment")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
