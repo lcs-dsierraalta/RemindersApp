@@ -15,6 +15,7 @@ struct AddTask: View {
     //Details of the new task
     @State private var description = ""
     @State private var priority = TaskPriority.low
+    @State private var course = ""
     
     //Whether to show this view
     @Binding var showing: Bool
@@ -24,6 +25,8 @@ struct AddTask: View {
             VStack {
                 Form {
                     TextField("Description", text: $description)
+                    
+                    TextField("Enter course name", text: $course)
                     
                     Picker("Priority", selection: $priority) {
                         Text(TaskPriority.low.rawValue).tag(TaskPriority.low)
@@ -49,7 +52,8 @@ struct AddTask: View {
         //Add the task to the list of tasks
         store.tasks.append(Task(description: description,
                                 priority: priority,
-                                completed: false))
+                                completed: false,
+                                course: course))
         
         //Dismiss this view
         showing = false

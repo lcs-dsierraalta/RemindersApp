@@ -31,7 +31,10 @@ struct TaskCell: View {
                     
                 }
             
-            Text(task.description)
+            VStack {
+                Text(task.description)
+                Text(task.course)
+            }
         }
         .foregroundColor(self.taskColor)
     }

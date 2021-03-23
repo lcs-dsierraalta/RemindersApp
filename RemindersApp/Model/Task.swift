@@ -11,6 +11,7 @@ enum TaskCodingKeys: CodingKey{
     case description
     case priority
     case completed
+    case course
 }
 
 class Task: Identifiable, ObservableObject, Codable {
@@ -19,12 +20,14 @@ class Task: Identifiable, ObservableObject, Codable {
     var description: String
     var priority: TaskPriority
     @Published var completed: Bool
+    var course: String
     
-    internal init(id: UUID = UUID(), description: String, priority: TaskPriority, completed: Bool) {
+    internal init(id: UUID = UUID(), description: String, priority: TaskPriority, completed: Bool, course: String) {
         self.id = id
         self.description = description
         self.priority = priority
         self.completed = completed
+        self.course = course
     }
     
     // Provide details for how to decode from JSON into an instance of this data type
@@ -37,6 +40,8 @@ class Task: Identifiable, ObservableObject, Codable {
         self.priority = try container.decode(TaskPriority.self, forKey: .priority)
         // Decode "completed" property into an instance of the Bool type
         self.completed = try container.decode(Bool.self, forKey: .completed)
+        // Decode "course" property into an instance of the string type
+        self.course = try container.decode(String.self, forKey: .course)
     }
 
     // Provide details for how to encode to JSON from an instance of this type
@@ -56,7 +61,7 @@ class Task: Identifiable, ObservableObject, Codable {
 
 
 let testData = [
-    Task(description: "Do Homework", priority: .high, completed: false),
-    Task(description: "Eat Oreos", priority: .medium, completed: true),
-    Task(description: "Play Games", priority: .low, completed: false)
+    Task(description: "Do problem set", priority: .high, completed: false, course: "Physics"),
+    Task(description: "Finish essay", priority: .medium, completed: true, course: "English"),
+    Task(description: "Prepare presentation", priority: .low, completed: false, course: "Computer Science")
 ]
