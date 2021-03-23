@@ -53,6 +53,7 @@ class Task: Identifiable, ObservableObject, Codable {
         try container.encode(description, forKey: .description)
         try container.encode(priority.rawValue, forKey: .priority)
         try container.encode(completed, forKey: .completed)
+        try container.encode(course, forKey: .course)
 
     }
 
