@@ -8,7 +8,7 @@
 import Foundation
 
 enum TaskCodingKeys: CodingKey{
-    case description
+    case assignmentName
     case priority
     case completed
     case course
@@ -17,14 +17,14 @@ enum TaskCodingKeys: CodingKey{
 class Task: Identifiable, ObservableObject, Codable {
     
     var id = UUID()
-    var description: String
+    var assignmentName: String
     var priority: TaskPriority
     @Published var completed: Bool
     var course: String
     
-    internal init(id: UUID = UUID(), description: String, priority: TaskPriority, completed: Bool, course: String) {
+    internal init(id: UUID = UUID(), assignmentName: String, priority: TaskPriority, completed: Bool, course: String) {
         self.id = id
-        self.description = description
+        self.assignmentName = assignmentName
         self.priority = priority
         self.completed = completed
         self.course = course
@@ -35,7 +35,7 @@ class Task: Identifiable, ObservableObject, Codable {
         let container = try decoder.container(keyedBy: TaskCodingKeys.self)
 
         // Decode "description" property into an instance of the String type
-        self.description = try container.decode(String.self, forKey: .description)
+        self.assignmentName = try container.decode(String.self, forKey: .assignmentName)
         // Decode "priority" property into an instance of the TaskPriority type
         self.priority = try container.decode(TaskPriority.self, forKey: .priority)
         // Decode "completed" property into an instance of the Bool type
@@ -50,7 +50,7 @@ class Task: Identifiable, ObservableObject, Codable {
         var container = encoder.container(keyedBy: TaskCodingKeys.self)
 
         // Everything is encoded into String types
-        try container.encode(description, forKey: .description)
+        try container.encode(assignmentName, forKey: .assignmentName)
         try container.encode(priority.rawValue, forKey: .priority)
         try container.encode(completed, forKey: .completed)
         try container.encode(course, forKey: .course)
@@ -62,7 +62,7 @@ class Task: Identifiable, ObservableObject, Codable {
 
 
 let testData = [
-    Task(description: "Do problem set", priority: .high, completed: false, course: "Physics"),
-    Task(description: "Finish essay", priority: .medium, completed: true, course: "English"),
-    Task(description: "Prepare presentation", priority: .low, completed: false, course: "Computer Science")
+    Task(assignmentName: "Do problem set", priority: .high, completed: false, course: "Physics"),
+    Task(assignmentName: "Finish essay", priority: .medium, completed: true, course: "English"),
+    Task(assignmentName: "Prepare presentation", priority: .low, completed: false, course: "Computer Science")
 ]

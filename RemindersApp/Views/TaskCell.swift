@@ -32,7 +32,7 @@ struct TaskCell: View {
                 }
             
             VStack {
-                Text(task.description)
+                Text(task.assignmentName)
                 Text(task.course)
             }
         }

@@ -13,7 +13,7 @@ struct AddTask: View {
     @ObservedObject var store: TaskStore
     
     //Details of the new task
-    @State private var description = ""
+    @State private var assignmentName = ""
     @State private var priority = TaskPriority.low
     @State private var course = ""
     
@@ -24,7 +24,7 @@ struct AddTask: View {
         NavigationView {
             VStack {
                 Form {
-                    TextField("Description", text: $description)
+                    TextField("Description", text: $assignmentName)
                     
                     TextField("Enter course name", text: $course)
                     
@@ -50,7 +50,7 @@ struct AddTask: View {
     func saveTask() {
         
         //Add the task to the list of tasks
-        store.tasks.append(Task(description: description,
+        store.tasks.append(Task(assignmentName: assignmentName,
                                 priority: priority,
                                 completed: false,
                                 course: course))
