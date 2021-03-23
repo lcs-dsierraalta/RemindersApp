@@ -36,10 +36,13 @@ struct ContentView: View {
             
             // Save the list of tasks
             let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(store.tasks) {
+            do {
+                let encoded = try encoder.encode(store.tasks)
                 print("Saving tasks list now, app has been backgrounded or quit...")
                 // Actually save the tasks to UserDefaults
-                UserDefaults.standard.setValue(encoded, forKey: "tasks")
+                UserDefaults.standard.setValue(encoded, forKey: "tasks1")
+            } catch {
+                print(error)
             }
             
         }

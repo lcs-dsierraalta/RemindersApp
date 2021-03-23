@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct RemindersAppApp: App {
     
-   @StateObject private var store = TaskStore(tasks: testData)
+   @StateObject private var store = TaskStore()
     
     var body: some Scene {
         WindowGroup {

@@ -21,7 +21,7 @@ class TaskStore: ObservableObject {
                 print("Saving tasks list now...")
                 
                 // Actually save the task
-                UserDefaults.standard.setValue(encoded, forKey: "tasks")
+                UserDefaults.standard.setValue(encoded, forKey: "tasks1")
                 
             }
             
@@ -33,7 +33,7 @@ class TaskStore: ObservableObject {
     init(tasks: [Task] = []) {
         
         // Try to read the existing tasks from the app bundle
-        if let readItems = UserDefaults.standard.data(forKey: "tasks") {
+        if let readItems = UserDefaults.standard.data(forKey: "tasks1") {
 
             let decoder = JSONDecoder()
 
