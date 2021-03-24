@@ -36,9 +36,13 @@ struct TaskCell: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
-                Text(task.course)
-                    .font(.subheadline)
-                    .multilineTextAlignment(.leading)
+                
+                HStack {
+                    Text(task.course)
+                        .font(.subheadline)
+                        .multilineTextAlignment(.leading)
+                    Text(task.dueDate, style: .date)
+                }
                     
             }
         }
