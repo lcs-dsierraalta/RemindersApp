@@ -33,7 +33,13 @@ struct TaskCell: View {
             
             VStack {
                 Text(task.assignmentName)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
                 Text(task.course)
+                    .font(.subheadline)
+                    .multilineTextAlignment(.leading)
+                    
             }
         }
         .foregroundColor(self.taskColor)
