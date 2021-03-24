@@ -31,7 +31,7 @@ struct TaskCell: View {
                     
                 }
             
-            VStack {
+            VStack(alignment: .leading) {
                 Text(task.assignmentName)
                     .font(.title2)
                     .fontWeight(.bold)
@@ -42,6 +42,8 @@ struct TaskCell: View {
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
                     Text(task.dueDate, style: .date)
+                        .font(.subheadline)
+                        .multilineTextAlignment(.trailing)
                 }
                     
             }

@@ -29,7 +29,8 @@ struct AddTask: View {
                     
                     TextField("Enter course name", text: $course)
                     
-                    DatePicker("Enter due date", selection: $dueDate, in: Date()...)
+                    DatePicker("Due Date:", selection: $dueDate, in: Date()...)
+                        .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
                     
                     Picker("Priority", selection: $priority) {
                         Text(TaskPriority.low.rawValue).tag(TaskPriority.low)
