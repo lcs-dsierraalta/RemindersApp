@@ -43,12 +43,12 @@ struct AddTask: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
-                    saveTask()
+                        saveTask()
+                    }
                 }
             }
         }
     }
-}
     
     func saveTask() {
         
@@ -57,7 +57,7 @@ struct AddTask: View {
                                 priority: priority,
                                 completed: false,
                                 course: course,
-                                dueDate: Date()))
+                                dueDate: dueDate))
         
         //Dismiss this view
         showing = false
