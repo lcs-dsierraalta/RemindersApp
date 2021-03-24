@@ -9,13 +9,14 @@ import SwiftUI
 
 struct AddTask: View {
     
-    //Get a reference to the sotre of tasks (TaskStore)
+    //Get a reference to the store of tasks (TaskStore)
     @ObservedObject var store: TaskStore
     
     //Details of the new task
     @State private var assignmentName = ""
     @State private var priority = TaskPriority.low
     @State private var course = ""
+    @State private var dueDate = Date()
     
     //Whether to show this view
     @Binding var showing: Bool
@@ -27,6 +28,8 @@ struct AddTask: View {
                     TextField("Description", text: $assignmentName)
                     
                     TextField("Enter course name", text: $course)
+                    
+                    DatePicker("Enter due date", selection: $dueDate, in: Date()...)
                     
                     Picker("Priority", selection: $priority) {
                         Text(TaskPriority.low.rawValue).tag(TaskPriority.low)
@@ -53,7 +56,8 @@ struct AddTask: View {
         store.tasks.append(Task(assignmentName: assignmentName,
                                 priority: priority,
                                 completed: false,
-                                course: course))
+                                course: course,
+                                dueDate: Date()))
         
         //Dismiss this view
         showing = false

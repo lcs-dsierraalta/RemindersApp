@@ -12,6 +12,7 @@ enum TaskCodingKeys: CodingKey{
     case priority
     case completed
     case course
+    case dueDate
 }
 
 class Task: Identifiable, ObservableObject, Codable {
@@ -21,13 +22,15 @@ class Task: Identifiable, ObservableObject, Codable {
     var priority: TaskPriority
     @Published var completed: Bool
     var course: String
+    var dueDate = Date()
     
-    internal init(id: UUID = UUID(), assignmentName: String, priority: TaskPriority, completed: Bool, course: String) {
+    internal init(id: UUID = UUID(), assignmentName: String, priority: TaskPriority, completed: Bool, course: String, dueDate: Date) {
         self.id = id
         self.assignmentName = assignmentName
         self.priority = priority
         self.completed = completed
         self.course = course
+        self.dueDate = dueDate
     }
     
     // Provide details for how to decode from JSON into an instance of this data type
@@ -42,6 +45,8 @@ class Task: Identifiable, ObservableObject, Codable {
         self.completed = try container.decode(Bool.self, forKey: .completed)
         // Decode "course" property into an instance of the string type
         self.course = try container.decode(String.self, forKey: .course)
+        // Decode "dueDate" property into an instance of the Date type
+        self.dueDate = try container.decode(Date.self, forKey: .dueDate)
     }
 
     // Provide details for how to encode to JSON from an instance of this type
@@ -54,6 +59,7 @@ class Task: Identifiable, ObservableObject, Codable {
         try container.encode(priority.rawValue, forKey: .priority)
         try container.encode(completed, forKey: .completed)
         try container.encode(course, forKey: .course)
+        try container.encode(dueDate, forKey: .dueDate)
 
     }
 
@@ -62,7 +68,7 @@ class Task: Identifiable, ObservableObject, Codable {
 
 
 let testData = [
-    Task(assignmentName: "Do problem set", priority: .high, completed: false, course: "Physics"),
-    Task(assignmentName: "Finish essay", priority: .medium, completed: true, course: "English"),
-    Task(assignmentName: "Prepare presentation", priority: .low, completed: false, course: "Computer Science")
+    Task(assignmentName: "Do problem set", priority: .high, completed: false, course: "Physics", dueDate: Date()),
+    Task(assignmentName: "Finish essay", priority: .medium, completed: true, course: "English", dueDate: Date()),
+    Task(assignmentName: "Prepare presentation", priority: .low, completed: false, course: "Computer Science", dueDate: Date())
 ]
