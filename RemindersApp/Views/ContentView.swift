@@ -16,7 +16,9 @@ struct ContentView: View {
     @State private var showingAddTask = false
     
     var body: some View {
-        List(store.tasks) { task in
+        List(store.tasks.sorted(by: { oneTask, nextTask in
+            return oneTask.dueDate < nextTask.dueDate
+        })) { task in
             TaskCell(task: task)
         }
         .navigationTitle("Assignments")
